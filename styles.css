@@ -22,3 +22,18 @@
     padding-right: 30px;
     padding-top: 50px;
 }
+nav 
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 70px;
+}
