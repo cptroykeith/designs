@@ -2,85 +2,88 @@
 <html lang="en">
 <head> 
     <meta charset="UTF-8">
-    <title>seek coding</title>
+    <title>Roy coding</title>
     <link rel="stylesheet"href="style.css">
     <!--linked-to-css-->
 </head>
 <body>
     <div class="full-page">
-        <div class="navbar">
-        <div>
-            <a href = 'website.html'>seek coding</a>
-        </div> 
-        <nav>
-            <ul id= 'MenuItems'>
-                <li><a href='#'>Home</a></li>
-                <li><a href='#'>About Us</a></li>
-                <li><a href='#'>Services</a></li>
-                <li><a href='#'>Contact</a></li>
-                <li><button class='loginbtn'
-                onclick="document.getElementById('login-form').style.display='block'"style="width:auto;">Login</button>
-
-                
-                </li>
-            </ul>
-        </nav>  
-
-        
-    </div>
-    <div id='login-form'class='login-page'>
-        <div class="form-box">
-            <div class='button-box'>
-                <div id='btn'></div>
-                <button
-                type='button'onclick='login()'class='toggle-btn'>Log In</button>
-                <button
-                type='button'onclick='register()'class='toggle-btn'>register</button>
-            </div>
-            <form id='login'class='input-group-login'>
-                <input type='text'class='input-field'placeholder='Email Id'required>
-                <input type='password'class='input-field'placeholder='Enter Password'required>
-                <input type='checkbox'class='check-box'><span>Remember Password</span>
-                <button type='submit'class='submit-btn'>Log in</button>
-            </form>
-            <form id='register'class='input-group'register> 
-                <input type='text'class='input-field'placeholder='First Name'required> 
-                <input type='text'class='input-field'placeholder='Last Name'required> 
-                <input type='email'class='input-field'placeholder='Email Id'required>
-                <input type='password'class='input-field'placeholder='Enter Password'required>
-                <input type='checkbox'class='check-box'>
-                <span>I agree to the terms and conditions</span>
-                <button type='submit'class='submit-btn'>Register</button>      
-            </form>
+         <div class="navbar">
+             <div>
+                 <a href = 'website.html'>Roy coding</a>
+             </div> 
+             <nav>
+                 <ul id= 'MenuItems'>
+                     <li><a href='#'>Home</a></li>
+                     <li><a href='#'>About Us</a></li>
+                     <li><a href='#'>Services</a></li>
+                     <li><a href='#'>Contact</a></li>
+                     <li><button class='loginbtn'onclick="document.getElementById('login-form').style.display='block'"style="width:auto;">Login</button></li>
+                 </ul>
+             </nav>      
         </div>
-    </div>  
-    </div>  
-    <script>
-        var x=document.getElementById('login');
-        var y=document.getElementById('register');
+         <div id='login-form'class='login-page'>
+             <div class="form-box">
+                 <div class='button-box'>
+                   <div id='btn'></div>
+                   <button
+                    type='button' id='toggle-login' onclick='login()' class='toggle-btn'>Log In
+                   </button>
+                   <button 
+                   type='button' id='toggle-register' onclick='register()' class='toggle-btn'>Register
+                   </button>
+             </div>
+             <form id='login' class='input-group-login'>
+                 <input type='text'class='input-field'placeholder='Email Id'required>
+                 <input type='password'class='input-field'placeholder='Enter Password'required>
+                 <!-- <input type='checkbox'class='check-box'><span>Remember Password</span> -->
+                 <button type='submit'class='submit-btn'>Log in</button>
+             </form>
+             <form id='register' class='input-group-register' style="display:none;"> 
+                 <input type='text'class='input-field'placeholder='First Name'required> 
+                 <input type='text'class='input-field'placeholder='Last Name'required> 
+                 <input type='email'class='input-field'placeholder='Email Id'required>
+                 <input type='password'class='input-field'placeholder='Enter Password'required>
+                 <input type='password'class='input-field'placeholder='confirm Password'required>
+                 <input type='checkbox'class='check-box'><span>I agree to the terms and conditions</span>
+                 <button type='submit'class='submit-btn'>Register</button>      
+             </form>
+             </div>
+         </div>  
+     </div>  
+     <script>
+        var loginForm=document.getElementById('login');
+        var registerForm=document.getElementById('register');
         var z=document.getElementById('btn');
         function register()
         {
-            x.style.left='400px';
-            y.style.left='50px';
+            loginForm.style.left='-400px';
+            registerForm.style.left='50px';
             z.style.left='110px';
         }
         function login()
         {
-            x.style.left='50px';
-            y.style.left='450px';
+            loginForm.style.left='50px';
+            registerForm.style.left='450px';
             z.style.left='0px';
         }
-    </script>
-    <script>
-        var modal = document.getElementById('loginform');
+
+        var toggleLogin = document.getElementById('toggle-login');
+        var toggleRegister = document.getElementById('toggle-register');
+
         window.onclick = function(event)
         {
-            if (event.target == modal)
+            if (event.target == toggleLogin)
             {
-                modal.style.display = "none"
+                registerForm.style.display = "none";
+                loginForm.style.display = "unset";
+            }
+
+           if(event.target == toggleRegister){
+                loginForm.style.display = "none";
+                registerForm.style.display = "unset";
             }
         }
-    </script>
+     </script>
 </body>
 </html>
