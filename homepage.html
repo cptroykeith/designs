@@ -72,5 +72,15 @@
             z.style.left='0px';
         }
     </script>
+    <script>
+        var modal = document.getElementById('loginform');
+        window.onclick = function(event)
+        {
+            if (event.target == modal)
+            {
+                modal.style.display = "none"
+            }
+        }
+    </script>
 </body>
 </html>
