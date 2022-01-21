@@ -127,13 +127,11 @@ a
 .input-field
 {
     width: 100%;
-    padding: 10px 0;
+    padding: 10px;
     margin: 5px 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    outline: none;
-    background:top;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 15px;
 }
 .submit-btn
 {
