@@ -130,7 +130,7 @@ a
     padding: 10px;
     margin: 5px 0;
     background: transparent;
-    border: 1px solid gray;
+    border: 1px solid rgb(128, 126, 126);
     border-radius: 15px;
 }
 .submit-btn
@@ -162,7 +162,7 @@ span
 }
 #login input
 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 15;
 }
 #register
@@ -171,6 +171,6 @@ span
 }
 #register input
 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 15;
 }
