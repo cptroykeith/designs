@@ -162,7 +162,7 @@ span
 }
 #login input
 {
-    color: rgb(0, 0, 0);
+    color: rgb(153, 26, 26);
     font-size: 15;
 }
 #register
@@ -171,6 +171,6 @@ span
 }
 #register input
 {
-    color: rgb(0, 0, 0);
+    color: rgb(161, 24, 24);
     font-size: 15;
 }
